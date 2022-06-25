@@ -1311,8 +1311,23 @@ span.circle-client {
         gap: 60px;
     }
 
+    .author__img {
+        width: 100%;
+        height: auto;
+    }
+
     .books-text {
         width: 250px;
+    }
+
+    .copy__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .learn__img {
+        width: 100%;
+        height: auto;
     }
 
     .reviews-client {
@@ -1690,11 +1705,6 @@ span.circle-client {
         width: 100%;
     }
 
-    .copy__img {
-        width: 490px;
-        height: 330px;
-    }
-
     .knowledge-block {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: auto;
@@ -1782,11 +1792,6 @@ span.circle-client {
         width: 90%;
     }
 
-    .author__img {
-        width: 430px;
-        height: 540px;
-    }
-
     #trust {
         padding: 50px 0;
     }
@@ -1800,11 +1805,6 @@ span.circle-client {
         padding: 50px 0;
     }
 
-    .copy__img {
-        width: 390px;
-        height: 260px;
-    }
-
     #learn {
         padding: 50px 0;
     }
@@ -1816,10 +1816,6 @@ span.circle-client {
 
     .learn-img {
         width: 90%;
-    }
-
-    .learn__img {
-        height: auto;
     }
 
     #knowledge {
@@ -1846,9 +1842,40 @@ span.circle-client {
     .updates-block {
         padding: 0;
     }
+
+    .modal__wrap {
+        max-width: 400px;
+        width: 90%;
+    }
+
+    .modal__content {
+        padding: 20px;
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 450px) {
+
+    .header__links {
+        display: flex;
+        flex-wrap: wrap;
+        width: 140px;
+        gap: 10px;
+    }
+
+    .header__link {
+        margin: 0;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+    }
+
+    .header-rigth__order {
+        margin-left: 20px;
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
     .author-contact {
         flex-direction: column;
     }
