@@ -37,6 +37,7 @@ function transForm() {
 }
 
 function toggleMenu() {
+  console.log(window.innerWidth);
   if (window.innerWidth < 851) {
     menuLinks.classList.toggle('menu-phone');
     menuBurger.classList.toggle('menu-close');
@@ -49,4 +50,58 @@ const menuBurger = document.getElementsByClassName('menu-burger')[0];
 menuBurger.addEventListener('click' , toggleMenu)
 
 
-menuLinks.addEventListener('click' , toggleMenu)
+menuLinks.addEventListener('click' , toggleMenu);
+
+/* GSAP */
+
+let topPage = gsap.timeline();
+
+topPage.from(".header-wrap", {duration: 0.5, opacity: 0});
+topPage.from(".welcome-left", {duration: 0.5, x: -1000});
+topPage.from(".welcome-rigth", {duration: 0.5, x: 1000}, "-=0.5");
+
+
+
+let sectionTitles = gsap.utils.toArray('.section-title');
+sectionTitles.forEach((title) => {
+  gsap.from(title, { 
+    scrollTrigger: {
+        trigger: title,
+    },
+    duration: 0.5,
+    y: -100
+});
+})
+
+let fromLeft = gsap.utils.toArray('.animation_left');
+fromLeft.forEach((elem) => {
+  gsap.from(elem, { 
+    scrollTrigger: {
+        trigger: elem,
+    },
+    duration: 0.5,
+    x: -200
+});
+})
+
+let fromRigth = gsap.utils.toArray('.animation_rigth');
+fromRigth.forEach((elem) => {
+  gsap.from(elem, { 
+    scrollTrigger: {
+        trigger: elem,
+    },
+    duration: 0.5,
+    x: 200
+});
+})
+
+let fromBottom = gsap.utils.toArray('.animation_bottom');
+fromBottom.forEach((elem) => {
+  gsap.from(elem, { 
+    scrollTrigger: {
+        trigger: elem,
+    },
+    duration: 0.5,
+    y: 100
+});
+})
